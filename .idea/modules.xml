@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ProgrammingII.iml" filepath="$PROJECT_DIR$/.idea/ProgrammingII.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ProgrammingII_Notes_Sammy_Kagan.iml" filepath="$PROJECT_DIR$/.idea/ProgrammingII_Notes_Sammy_Kagan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Programming2_SP19/.idea/ProgrammingII_Projects_Sammy_Kagan.iml" filepath="$PROJECT_DIR$/../Programming2_SP19/.idea/ProgrammingII_Projects_Sammy_Kagan.iml" />
     </modules>
   </component>
 </project>
