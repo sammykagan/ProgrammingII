@@ -1,4 +1,5 @@
 # Our friend, the List
+import random
 
 my_list = ["Bev", "Abe", "Cam", "Dan", "Eve", "Flo", "Gus"]
 my_nums = [8, 4, 7, 5, 2, 9]
@@ -116,3 +117,34 @@ print(my_list)
 # make a list of squares form 0 to 100, but only odd ones
 my_list = [x ** 2 for x in range(100) if x ** 2 % 2 == 1] # MODULO
 print(my_list)
+
+#make a list of 100 random numbers from 1 to 100
+my_list = [random.randrange(1, 101) for x in range(100)]
+print(my_list)
+
+# we can also go back through list to make a NEW list
+my_list2 = [x for x in my_list]
+print(my_list2)
+
+for item in my_list:
+    print(my_list)
+
+# roll two dice 100 times and put in list
+my_list = [[random.randrange(1,7), random.randrange(1,7)] for x in range(100)]
+print(my_list)
+
+# roll two dice 100 times and only keep the 7s
+my_list = [x for x in[[random.randrange(1,7), random.randrange(1,7)] for x in range(100)]if x[0] + x[1] == 7]
+print(my_list)
+
+values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+suits = ["H", "D", "C", "S"]
+
+deck = []
+
+for value in values:
+    for suit in suits:
+        deck.append(value + suit) # concatenation
+
+print(deck)
+print(values + suits)
