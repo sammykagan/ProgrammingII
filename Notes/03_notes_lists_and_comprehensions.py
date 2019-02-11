@@ -148,3 +148,31 @@ for value in values:
 
 print(deck)
 print(values + suits)
+
+# Strings using indices
+first = "Aaron"
+last = "Lee"
+print (first + " " + last)
+print (first[0])
+print (first [-2:])
+for char in first:
+    print (char)
+if "L" in last:
+    print("Yep")
+
+print(first.upper())
+
+print('''
+You
+    can
+        print
+    like
+this
+    wow
+        wow
+    wowee
+cool!
+''')
+
+print("Hello", end="HI")
+print("World")
