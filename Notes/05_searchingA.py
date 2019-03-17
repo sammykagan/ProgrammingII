@@ -51,14 +51,15 @@ randlist = [random.randrange(1,random_range) for x in range(sample_range)]
 print(randlist)
 
 start = time.time()
-for key_pos in range(1, len(randlist)):
-    key_val = randlist[key_pos]
-    scan_pos = key_pos - 1 # look to dancer on the left
-    while (scan_pos >= 0) and (randlist[scan_pos] > key_val):
-        randlist[scan_pos + 1] = randlist[scan_pos]
-        scan_pos -= 1
+def insertion_sort(randlist):
+    for key_pos in range(1, len(randlist)):
+        key_val = randlist[key_pos]
+        scan_pos = key_pos - 1 # look to dancer on the left
+        while (scan_pos >= 0) and (randlist[scan_pos] > key_val):
+            randlist[scan_pos + 1] = randlist[scan_pos]
+            scan_pos -= 1
 
-    randlist[scan_pos + 1] = key_val
+        randlist[scan_pos + 1] = key_val
 
 end = time.time() - start
 
