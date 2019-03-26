@@ -92,5 +92,6 @@ plt.xticks(library_numbers, library_names, rotation=90, fontsize=6)
 plt.xlabel("Chicago Library Branch")
 plt.ylabel("Total Visitors")
 plt.title("Chicago Public Library Visitors 2018")
+plt.legend()
 
 plt.show()
