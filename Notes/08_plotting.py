@@ -86,7 +86,7 @@ try:
 except:
     print("Could not convert to integer")
 
-plt.bar(library_numbers, library_ytd, 1, alpha=1, color='white', edgecolor='hotpink', linewidth = 1)
+plt.bar(library_numbers, library_ytd, 1, alpha=1, color='white', edgecolor='hotpink', linewidth = 1, label="Visitors")
 plt.xticks(library_numbers, library_names, rotation=90, fontsize=6)
 
 plt.xlabel("Chicago Library Branch")
