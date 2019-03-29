@@ -31,6 +31,7 @@ print(countries)
 print(firearms_per_100)
 print(homicides_per_100k)
 
+plt.figure(1, figsize=(12,6))
 plt.scatter(firearms_per_100, homicides_per_100k)
 
 # best fit line
@@ -38,5 +39,12 @@ m, b = (np.polyfit(firearms_per_100, homicides_per_100k, 1))
 fit_x = [0, 100]
 fit_y = [b, m * 100 + b]
 plt.plot(fit_x, fit_y)
+
+plt.title("Homicides vs. Gun Ownership by Country")
+plt.xlabel("Firearms per 100 people")
+plt.ylabel("Homicides by firearm per 100k people")
+
+for i in range(len(countries)):
+    plt.annotate(countries[i], xy=(firearms_per_100[i] - 3, homicides_per_100k[i] + 0.05))
 
 plt.show()
