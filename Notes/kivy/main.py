@@ -11,7 +11,18 @@ class TempApp(App):
 
 class TempLayout(BoxLayout):
     #will contain all of my functions
-    pass
+    def f_conversion(self):
+            if self.temp.text == "":
+                return
+            else:
+                f = float(self.temp.text) * 9 / 5 + 32
+                self.answer.text = str(round(f, 2))
+    def c_conversion(self):
+        if self.temp.text == "":
+            return
+        else:
+            c = (float(self.temp.text) - 32) * 5 / 9
+            self.answer.text = str(round(c, 2))
 
 
 if __name__ == "__main__":

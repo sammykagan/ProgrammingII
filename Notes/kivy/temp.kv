@@ -1,10 +1,59 @@
 <TempLayout>:
     orientation: "vertical"
+    id: calculator
+    temp: _temp
+    answer: _answer
     Label:
+        #canvas:
+            #Color:
+                #rgba: [1, 0, 0, 1]
+            #Rectangle:
+               # pos: self.x, self.y
+               # size: self.width, self.height
         text: "Temperature Converter"
+        font_size: 60
+        font_name: "Comic Sans MS copy"
+        color: [255/256, 204/256, 255/256, 1] # rbga
+        bold: "True"
+        background_normal:""
+
+
+    BoxLayout:
+        orientation: "horizontal"
+        Label:
+            text: "Temperature:"
+            font_size: 40
+            color: [153/256, 204/256, 255/256, 1] # rbga
+            size_hint_x: 1
+            font_name: "Comic Sans MS copy"
+        TextInput:
+            id: _temp
+            input_filter: "float"
+            size_hint_x: 1
+    BoxLayout:
+        Button:
+            text: "Convert to Fahrenheit"
+            font_name: "Comic Sans MS copy"
+            font_size: 40
+            on_press: calculator.f_conversion()
+            color: [153/256, 153/256, 255/256, 1] # rbga
+        Button:
+            text: "Convert to Celsius"
+            font_name: "Comic Sans MS copy"
+            font_size: 40
+            on_press: calculator.c_conversion()
+            color: [153/256, 153/256, 255/256, 1] # rbga
 
     BoxLayout:
         Label:
-            text: "Temp:"
-        TextInput:
+            text: "Answer:"
+            font_name: "Comic Sans MS copy"
+            font_size: 40
+        Label:
+            text: "Converted Temp"
+            font_name: "Comic Sans MS copy"
+            font_size: 40
+            color: [255/256, 0/256, 127/256, 1] # rbga
+            id: _answer
+
 
