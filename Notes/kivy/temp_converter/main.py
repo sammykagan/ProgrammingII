@@ -16,15 +16,18 @@ class TempLayout(BoxLayout):
                 return
             else:
                 f = float(self.temp.text) * 9 / 5 + 32
-                self.answer.text = str(round(f, 2))
+                self.answer.text = str(round(f, 2)) + str("ºF")
     def c_conversion(self):
         if self.temp.text == "":
             return
         else:
             c = (float(self.temp.text) - 32) * 5 / 9
-            self.answer.text = str(round(c, 2))
+            self.answer.text = str(round(c, 2)) + str("ºC")
 
 
 if __name__ == "__main__":
     app = TempApp()
     app.run()
+
+And do you think that CAN change?
+or should one resign to...things are done?
