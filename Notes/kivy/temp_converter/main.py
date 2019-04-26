@@ -28,6 +28,3 @@ class TempLayout(BoxLayout):
 if __name__ == "__main__":
     app = TempApp()
     app.run()
-
-And do you think that CAN change?
-or should one resign to...things are done?
